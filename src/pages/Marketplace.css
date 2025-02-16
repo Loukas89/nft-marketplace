@@ -1,0 +1,125 @@
+.marketplace-container {
+  position: relative;
+  min-height: 100vh;
+  text-align: center;
+  padding: 60px 20px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+
+
+
+/* Full-screen background with animation */
+.marketplace-container {
+  position: relative;
+  min-height: 100vh;
+  text-align: center;
+  padding: 60px 20px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Animated Background */
+.animated-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1e1e2e, #232946);
+  animation: gradientMove 6s infinite alternate;
+  z-index: -1;
+}
+
+@keyframes gradientMove {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(20deg); }
+}
+
+/* Title Styling */
+.marketplace-title {
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.marketplace-subtitle {
+  font-size: 1.3rem;
+  font-weight: 400;
+  opacity: 0.8;
+  margin-bottom: 40px;
+}
+
+/* NFT Grid */
+.nft-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* NFT Cards */
+.nft-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  position:relative;
+}
+
+.nft-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 255, 255, 0.8);
+}
+
+/* NFT Image */
+.nft-image {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.nft-card:hover .nft-image {
+  transform: scale(1.1);
+}
+
+/* NFT Details */
+.nft-details {
+  margin-top: 15px;
+}
+
+.nft-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nft-price {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #f4a261;
+}
+
+/* Buy Button */
+.buy-button {
+  background: linear-gradient(90deg,  #00FFFF, #0044FF);
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.buy-button:hover {
+  background: linear-gradient(90deg, #ff758c, #ff7eb3);
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 1);
+}
