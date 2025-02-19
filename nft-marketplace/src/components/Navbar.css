@@ -1,0 +1,182 @@
+/* Navbar container */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1000;
+}
+
+/* Logo on the Left */
+.logo {
+  flex: 1;
+}
+
+.logo a {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.logo a:hover {
+  color: #00FFFF;
+}
+
+/* Navigation Links on the Left */
+.nav-links-container {
+  flex: 1.5;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links a {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  padding: 5px 10px;
+}
+
+.nav-links a:hover {
+  color: #00FFFF;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.8);
+}
+
+/* Search Bar in the Middle */
+.search-bar-container {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar {
+  width: 250px;
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-bar::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.search-bar:focus {
+  border-color: #00FFFF;
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.8);
+}
+
+/* Wallet & Login Buttons on the Right */
+.wallet-button-container {
+  flex: 1.5;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-right: 20px;
+}
+
+/* Fix Alignment for Large Screens */
+@media (min-width: 1200px) {
+  .wallet-button-container {
+    margin-right: 40px; /* ✅ Keeps Connect Wallet button properly inside navbar */
+  }
+}
+
+/* Login Button (Neon Effect) */
+.login-btn {
+  background: transparent;
+  border: 2px solid #00FFFF; /* ✅ Neon Border */
+  color: #00FFFF; /* ✅ Neon Text */
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.6); /* ✅ Neon Glow */
+}
+
+/* Neon Hover Effect */
+.login-btn:hover {
+  background: rgba(0, 255, 255, 0.2); /* ✅ Slight Glow Effect */
+  box-shadow: 0 0 15px rgba(0, 255, 255, 1);
+  transform: scale(1.05); /* ✅ Slight Scale Effect */
+}
+
+/* Connect Wallet Button */
+.connect-wallet {
+  background: linear-gradient(90deg, #00FFFF, #0044FF);
+  color: white;
+  padding: 8px 16px; /* ✅ Fixed padding */
+  border: none;
+  border-radius: 8px;
+  font-size: 14px; /* ✅ Fixed font size */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  white-space: nowrap;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+  max-width: 150px; /* ✅ Prevents button from stretching */
+  text-align: center;
+}
+
+/* Wallet Button Hover Effect */
+.connect-wallet:hover {
+  background: linear-gradient(90deg, #0044FF, #00FFFF);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 1);
+  transform: scale(1.05); /* ✅ Subtle hover effect */
+}
+
+/* Fix Wallet Button Size on Large Screens */
+@media (min-width: 1200px) {
+  .connect-wallet {
+    padding: 8px 16px; /* ✅ Keeps consistent padding */
+    font-size: 14px; /* ✅ Prevents font from resizing */
+    max-width: 140px; /* ✅ Fixes button width */
+  }
+}
+
+/* Responsive Fix for Small Screens */
+@media (max-width: 768px) {
+  .search-bar-container {
+    display: none;
+  }
+
+  .nav-links-container {
+    display: none; /* ✅ Hide links on small screens */
+  }
+
+  .wallet-button-container {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .connect-wallet {
+    font-size: 12px; /* ✅ Adjust font size for mobile */
+    padding: 6px 12px; /* ✅ Makes button smaller for mobile */
+    max-width: 130px; /* ✅ Prevents oversized button */
+  }
+}
